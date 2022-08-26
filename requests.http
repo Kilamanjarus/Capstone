@@ -1,4 +1,7 @@
 ###
+get http://localhost:3000/workouts
+
+###
 post http://localhost:3000/workouts
 Content-Type: application/json
 
@@ -8,4 +11,14 @@ Content-Type: application/json
 "added_weight": 10,
 "reps": 10,
 "sets": 3
+}
+
+###
+patch http://localhost:3000/workouts/4
+Content-Type: application/json
+
+{
+"exercise_id": 1,
+"added_weight": 25,
+"reps": 10
 }
