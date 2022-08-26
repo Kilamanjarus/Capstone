@@ -1,0 +1,11 @@
+###
+post http://localhost:3000/workouts
+Content-Type: application/json
+
+{
+"exercise_id": 2,
+"workout_id": 2,
+"added_weight": 10,
+"reps": 10,
+"sets": 3
+}
