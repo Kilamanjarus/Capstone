@@ -3,10 +3,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get "/routines" => "workout_exercise#index"
-  post "/routines" => "workout_exercise#create"
-  patch "/routines/:id" => "workout_exercise#update"
+  get "/routines" => "routine#index"
+  post "/routines" => "routine#create"
+  patch "/routines/:id" => "routine#update"
 
-  get "/workouts" => "routine#index"
-  post "/workouts" => "routine#create"
+  get "/workouts" => "workouts#index"
+  post "/workouts" => "workouts#create"
 end
