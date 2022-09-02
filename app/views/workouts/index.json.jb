@@ -1,0 +1,7 @@
+@workouts.map do |workout|
+  {
+    id: workout.id,
+    title: workout.title,
+    routines: workout.routines,
+  }
+end

@@ -1,5 +1,5 @@
 ### Workout Exercises Index
-get http://localhost:3000/routines
+get http://localhost:3000/routines.json
 
 ### Workout Exercises Create
 post http://localhost:3000/routines
@@ -26,7 +26,7 @@ Content-Type: application/json
 
 
 ### Workouts (routines at the moment) Index
-get http://localhost:3000/workouts
+get http://localhost:3000/workouts.json
 
 ### Workouts (routines at the moment) Create
 post http://localhost:3000/workouts

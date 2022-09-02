@@ -1,20 +1,20 @@
 class RoutineController < ApplicationController
   def index
-    routines = Routine.all
-    render json: routines.as_json
+    @routines = Routine.all
+    render template: "routines/index"
   end
 
   def create
-    routine = Routine.new(
-      routine_id: params[:routine_id],
+    @routine = Routine.new(
+      exercise_id: params[:exercise_id],
       workout_id: params[:workout_id],
       added_weight: params[:added_weight],
       reps: params[:reps],
       sets: params[:sets],
       status: "added",
     )
-    routine.save
-    render json: routine.as_json
+    @routine.save
+    render json: @routine.as_json
   end
 
   def update
@@ -22,7 +22,7 @@ class RoutineController < ApplicationController
     routine.added_weight = params[:added_weight] || routine.added_weight
     routine.reps = params[:reps] || routine.reps
     routine.sets = params[:sets] || routine.sets
-    exercise.save
-    render json: exercise.as_json
+    routine.save
+    render json: routine.as_json
   end
 end

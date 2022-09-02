@@ -1,7 +1,7 @@
 class WorkoutsController < ApplicationController
   def index
-    workout = Workout.all
-    render json: workout.as_json
+    @workouts = Workout.all
+    render template: "workouts/index"
   end
 
   def create
