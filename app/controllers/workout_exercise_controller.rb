@@ -13,7 +13,7 @@ class WorkoutExerciseController < ApplicationController
       sets: params[:sets],
       status: "added",
     )
-    exercise.save
+    exercise.save!
     render json: exercise.as_json
   end
 
@@ -23,7 +23,7 @@ class WorkoutExerciseController < ApplicationController
     exercise.added_weight = params[:added_weight] || exercise.added_weight
     exercise.reps = params[:reps] || exercise.reps
     exercise.sets = params[:sets] || exercise.sets
-    exercise.save
+    exercise.save!
     render json: exercise.as_json
   end
 end

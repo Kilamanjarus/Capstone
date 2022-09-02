@@ -1,8 +1,8 @@
-###
-get http://localhost:3000/workouts
+### Workout Exercises Index
+get http://localhost:3000/routines
 
-###
-post http://localhost:3000/workouts
+### Workout Exercises Create
+post http://localhost:3000/routines
 Content-Type: application/json
 
 {
@@ -13,12 +13,25 @@ Content-Type: application/json
 "sets": 3
 }
 
-###
-patch http://localhost:3000/workouts/4
+### Workout Exercises Update
+patch http://localhost:3000/routines/4
 Content-Type: application/json
 
 {
 "exercise_id": 1,
 "added_weight": 25,
 "reps": 10
+}
+
+
+
+### Workouts (routines at the moment) Index
+get http://localhost:3000/workouts
+
+### Workouts (routines at the moment) Create
+post http://localhost:3000/workouts
+Content-Type: application/json
+
+{
+"title": "Arms day!"
 }
