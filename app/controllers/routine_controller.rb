@@ -25,4 +25,14 @@ class RoutineController < ApplicationController
     routine.save
     render json: routine.as_json
   end
+
+  def destroy
+    routine = Routine.find_by(id: params[:id])
+    if routine.status == "added"
+      routine.delete
+      render json: { message: "Exercise has been removed..." }
+    else
+      render json: { message: "Error, this exercise has been commited and is not able to be removed..." }
+    end
+  end
 end

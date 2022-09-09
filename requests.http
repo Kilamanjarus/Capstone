@@ -1,7 +1,7 @@
-### Workout Exercises Index
+### Routine Index
 get http://localhost:3000/routines.json
 
-### Workout Exercises Create
+### Routine Create
 post http://localhost:3000/routines
 Content-Type: application/json
 
@@ -13,7 +13,7 @@ Content-Type: application/json
 "sets": 3
 }
 
-### Workout Exercises Update
+### Routine Update
 patch http://localhost:3000/routines/4
 Content-Type: application/json
 
@@ -22,6 +22,9 @@ Content-Type: application/json
 "added_weight": 25,
 "reps": 10
 }
+
+### Routine Delete
+delete http://localhost:3000/routines/12
 
 
 
@@ -34,4 +37,25 @@ Content-Type: application/json
 
 {
 "title": "Arms day!"
+}
+
+
+
+### Exercise Index
+get http://localhost:3000/exercises
+
+
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "first_name": "Test",
+  "last_name": "Tester",
+  "username": "Testing",
+  "age": 1,
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
 }

@@ -2,6 +2,7 @@
   {
     id: workout.id,
     title: workout.title,
+    exercises: workout.exercises,
     routines: workout.routines,
   }
 end

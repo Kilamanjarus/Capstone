@@ -6,7 +6,12 @@ Rails.application.routes.draw do
   get "/routines" => "routine#index"
   post "/routines" => "routine#create"
   patch "/routines/:id" => "routine#update"
+  delete "/routines/:id" => "routine#destroy"
 
   get "/workouts" => "workouts#index"
   post "/workouts" => "workouts#create"
+
+  get "/exercises" => "exercise#index"
+
+  post "/users" => "users#create"
 end
