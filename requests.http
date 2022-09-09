@@ -13,6 +13,9 @@ Content-Type: application/json
 "sets": 3
 }
 
+### Routine Show
+get http://localhost:3000/routines/4.json
+
 ### Routine Update
 patch http://localhost:3000/routines/4
 Content-Type: application/json
@@ -28,10 +31,13 @@ delete http://localhost:3000/routines/12
 
 
 
-### Workouts (routines at the moment) Index
+### Workouts Index
 get http://localhost:3000/workouts.json
 
-### Workouts (routines at the moment) Create
+### Workouts Show
+get http://localhost:3000/workouts/1.json
+
+### Workouts Create
 post http://localhost:3000/workouts
 Content-Type: application/json
 
@@ -39,10 +45,18 @@ Content-Type: application/json
 "title": "Arms day!"
 }
 
+### Workouts Update
+patch http://localhost:3000/workouts/1.json
 
+{
+"title": "Arms day!"
+}
 
 ### Exercise Index
 get http://localhost:3000/exercises
+
+### Exercise Show
+get http://localhost:3000/exercises/1.json
 
 
 
@@ -68,3 +82,4 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+

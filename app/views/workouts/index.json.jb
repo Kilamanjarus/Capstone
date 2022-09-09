@@ -3,6 +3,15 @@
     id: workout.id,
     title: workout.title,
     exercises: workout.exercises,
-    routines: workout.routines,
+    routines: workout.routines.map do |routine|
+      {
+        exercise_id: routine.exercise_id,
+        exercise: routine.exercise,
+        workout_id: routine.workout_id,
+        added_weight: routine.added_weight,
+        reps: routine.reps,
+        sets: routine.sets,
+      }
+    end,
   }
 end

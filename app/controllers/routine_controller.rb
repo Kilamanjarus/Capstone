@@ -35,4 +35,9 @@ class RoutineController < ApplicationController
       render json: { message: "Error, this exercise has been commited and is not able to be removed..." }
     end
   end
+
+  def show
+    @routine = Routine.find_by(id: params[:id])
+    render template: "routines/show"
+  end
 end

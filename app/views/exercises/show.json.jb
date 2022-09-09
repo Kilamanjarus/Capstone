@@ -1,0 +1,5 @@
+{
+  id: @exercise.id,
+  created_at: @exercise.created_at,
+  updated_at: @exercise.updated_at
+}

@@ -1,5 +1,16 @@
 {
   id: @workout.id,
+  title: @workout.title,
+  routines: @workout.routines.map do |routine|
+    {
+      exercise_id: routine.exercise_id,
+      exercise: routine.exercise,
+      workout_id: routine.workout_id,
+      added_weight: routine.added_weight,
+      reps: routine.reps,
+      sets: routine.sets,
+    }
+  end,
   created_at: @workout.created_at,
-  updated_at: @workout.updated_at
+  updated_at: @workout.updated_at,
 }

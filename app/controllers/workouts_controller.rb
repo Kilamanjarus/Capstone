@@ -18,4 +18,9 @@ class WorkoutsController < ApplicationController
     end
     render json: routine.as_json
   end
+
+  def show
+    @workout = Workout.find_by(id: params[:id])
+    render template: "workouts/show"
+  end
 end

@@ -1,0 +1,6 @@
+@exercises.map do |exercise|
+  {
+    id: exercise.id,
+    url: exercise_url(exercise, format: :json),
+  }
+end

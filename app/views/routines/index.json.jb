@@ -6,6 +6,7 @@
     workout: routine.workout,
     workout_id: routine.workout_id,
     added_weight: routine.added_weight,
+    exercise: routine.exercise,
     reps: routine.reps,
     sets: routine.sets,
     status: routine.status,
