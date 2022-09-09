@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get "/exercises" => "exercise#index"
 
   post "/users" => "users#create"
+  post "/sessions" => "sessions#create"
 end
