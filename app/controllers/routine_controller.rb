@@ -1,5 +1,6 @@
 class RoutineController < ApplicationController
   def index
+    p current_user
     @routines = Routine.all
     render template: "routines/index"
   end
