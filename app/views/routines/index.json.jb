@@ -1,7 +1,7 @@
 @routines.map do |routine|
   {
     id: routine.id,
-    exercise: routine.exercise.name,
+    exercise: routine.exercise,
     exercise_id: routine.exercise_id,
     workout: routine.workout,
     workout_id: routine.workout_id,
