@@ -8,7 +8,7 @@ class WorkoutsController < ApplicationController
     workout = Workout.new(
       title: params[:title],
     )
-    workout.save
+    workout.save!
 
     routine = Routine.where(status: "added")
     routine.each do |exercise|
@@ -16,7 +16,7 @@ class WorkoutsController < ApplicationController
       exercise.workout_id = workout.id
       exercise.save!
     end
-    render json: routine.as_json
+    render json: workout.as_json
   end
 
   def show

@@ -42,7 +42,7 @@ post http://localhost:3000/workouts
 Content-Type: application/json
 
 {
-"title": "Arms day!"
+"title": "Test"
 }
 
 ### Workouts Update
