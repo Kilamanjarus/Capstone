@@ -49,9 +49,5 @@ group :development do
   # gem "spring"
 end
 
-<<<<<<< HEAD
 gem "http"
-=======
-gem "pry"
-gem "http"
->>>>>>> a25d9c31d9d3052970833bbf727a38f95a7b5b5e
+
