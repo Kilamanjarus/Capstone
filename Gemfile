@@ -25,6 +25,7 @@ gem "jb"
 gem "bcrypt", "~> 3.1.7"
 
 gem "jwt"
+gem 'uri'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -48,4 +49,9 @@ group :development do
   # gem "spring"
 end
 
+<<<<<<< HEAD
 gem "http"
+=======
+gem "pry"
+gem "http"
+>>>>>>> a25d9c31d9d3052970833bbf727a38f95a7b5b5e

@@ -5,11 +5,16 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+<<<<<<< HEAD
 require "uri"
+=======
+
+>>>>>>> a25d9c31d9d3052970833bbf727a38f95a7b5b5e
 require "net/http"
 require "openssl"
 require "JSON"
 require "http"
+
 
 url = URI("https://exercisedb.p.rapidapi.com/exercises")
 
@@ -18,7 +23,7 @@ http.use_ssl = true
 http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
 request = Net::HTTP::Get.new(url)
-request["X-RapidAPI-Key"] = "aa0de5e9f0msh7a8243b8526cdf9p1b95cdjsn636770e006cf"
+request["X-RapidAPI-Key"] = ""
 request["X-RapidAPI-Host"] = "exercisedb.p.rapidapi.com"
 
 def titleize(str)

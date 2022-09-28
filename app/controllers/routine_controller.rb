@@ -1,6 +1,11 @@
 class RoutineController < ApplicationController
   def index
+<<<<<<< HEAD
     @routines = Routine.where(user_id: current_user.id)
+=======
+    p current_user
+    @routines = Routine.all
+>>>>>>> a25d9c31d9d3052970833bbf727a38f95a7b5b5e
     render template: "routines/index"
   end
 
