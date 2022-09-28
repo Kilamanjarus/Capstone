@@ -1,6 +1,11 @@
 @exercises.map do |exercise|
   {
     id: exercise.id,
-    url: exercise_url(exercise, format: :json),
+    name: exercise.name,
+    style: exercise.style,
+    muscle: exercise.muscle,
+    equipment: exercise.equipment,
+    gifUrl: exercise.gifUrl,
+    on_routine: exercise.routines.where(workout_id: nil, user_id: current_user.id).empty? == false,
   }
 end

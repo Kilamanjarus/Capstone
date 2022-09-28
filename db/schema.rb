@@ -37,9 +37,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_28_174549) do
     t.integer "reps"
     t.integer "sets"
     t.string "status"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
   end
 
   create_table "user_equipments", force: :cascade do |t|
@@ -66,5 +66,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_28_174549) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
   end
-
 end

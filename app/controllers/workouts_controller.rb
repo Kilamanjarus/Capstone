@@ -7,6 +7,7 @@ class WorkoutsController < ApplicationController
   def create
     workout = Workout.new(
       title: params[:title],
+      user: current_user,
     )
     workout.save!
 
