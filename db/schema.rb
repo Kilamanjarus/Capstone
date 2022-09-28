@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema[7.0].define(version: 2022_09_28_174549) do
+=======
 ActiveRecord::Schema[7.0].define(version: 2022_09_16_180912) do
+>>>>>>> a25d9c31d9d3052970833bbf727a38f95a7b5b5e
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "equipment", force: :cascade do |t|
+    t.string "equipment_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "exercises", force: :cascade do |t|
     t.string "name"
@@ -33,6 +43,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_16_180912) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
+
+  create_table "user_equipments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "equipment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,6 +68,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_16_180912) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
 end

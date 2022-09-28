@@ -1,17 +1,23 @@
 class RoutineController < ApplicationController
   def index
+<<<<<<< HEAD
+    @routines = Routine.where(user_id: current_user.id)
+=======
     p current_user
     @routines = Routine.all
+>>>>>>> a25d9c31d9d3052970833bbf727a38f95a7b5b5e
     render template: "routines/index"
   end
 
   def create
+    p "#{current_user}"
     @routine = Routine.new(
       exercise_id: params[:exercise_id],
       workout_id: params[:workout_id],
       added_weight: params[:added_weight],
       reps: params[:reps],
       sets: params[:sets],
+      user_id: current_user.id,
       status: "added",
     )
     @routine.save
