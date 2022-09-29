@@ -3,6 +3,7 @@ get http://localhost:3000/routines.json
 
 ### Routine Create
 post http://localhost:3000/routines
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjQ1NTg4NDJ9.fAp1Iv9qNrBgXZFiDhbWkt1BK9O0RO9DSG7jyBhfxRE
 Content-Type: application/json
 
 {
@@ -83,14 +84,21 @@ Content-Type: application/json
   "password": "password"
 }
 
-### User_Equipment
+### User_Equipment Create
 POST http://localhost:3000/userequipment
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjQ1NTg4NDJ9.fAp1Iv9qNrBgXZFiDhbWkt1BK9O0RO9DSG7jyBhfxRE
 Content-Type: application/json
 
 {
-  "user_id": 1,
-  "equipment_id": 2
+  "id": 4
 }
 
-###
-DELETE http://localhost:3000/userequipment/3
+### User_Equipment Delete
+DELETE http://localhost:3000/userequipment/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjQ1NTg4NDJ9.fAp1Iv9qNrBgXZFiDhbWkt1BK9O0RO9DSG7jyBhfxRE
+
+
+
+### Equipment Index
+get http://localhost:3000/equipment.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjQ1NTg4NDJ9.fAp1Iv9qNrBgXZFiDhbWkt1BK9O0RO9DSG7jyBhfxRE

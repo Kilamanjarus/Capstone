@@ -1,15 +1,17 @@
 class UserequipController < ApplicationController
   def create
+    p current_user.id
+    p params[:id]
     @user_equipment = UserEquipment.new(
-      user_id: params[:user_id],
-      equipment_id: params[:equipment_id],
+      user_id: current_user.id,
+      equipment_id: params[:id],
     )
-    @user_equipment.save
+    @user_equipment.save!
     render json: @user_equipment.as_json
   end
 
   def destroy
-    user_equipment = UserEquipment.find_by(id: params[:id])
+    user_equipment = UserEquipment.find_by(id: params[:id], user_id: current_user.id)
     user_equipment.destroy
     render json: { message: "Deleted equipment from user..." }
   end
