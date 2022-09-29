@@ -1,7 +1,9 @@
-@equipment.map do |equipment|
-  {
-    id: equipment.id,
-    name: equipment.equipment_name,
-    owner: !equipment.users.find_by(id: current_user.id).nil?,
-  }
+@equipment.map do |array|
+  array.map do |equipment|
+    {
+      id: equipment.id,
+      name: equipment.equipment_name,
+      owner: !equipment.users.find_by(id: current_user.id).nil?,
+    }
+  end
 end
