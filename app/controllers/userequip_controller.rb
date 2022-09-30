@@ -11,7 +11,7 @@ class UserequipController < ApplicationController
   end
 
   def destroy
-    user_equipment = UserEquipment.find_by(id: params[:id], user_id: current_user.id)
+    user_equipment = UserEquipment.find_by(equipment_id: params[:id], user_id: current_user.id)
     user_equipment.destroy
     render json: { message: "Deleted equipment from user..." }
   end

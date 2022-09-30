@@ -54,7 +54,8 @@ patch http://localhost:3000/workouts/1.json
 }
 
 ### Exercise Index
-get http://localhost:3000/exercises
+get http://localhost:3000/exercises.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjQ1NTg4NDJ9.fAp1Iv9qNrBgXZFiDhbWkt1BK9O0RO9DSG7jyBhfxRE
 
 ### Exercise Show
 get http://localhost:3000/exercises/1.json
@@ -94,7 +95,7 @@ Content-Type: application/json
 }
 
 ### User_Equipment Delete
-DELETE http://localhost:3000/userequipment/4
+DELETE http://localhost:3000/userequipment/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjQ1NTg4NDJ9.fAp1Iv9qNrBgXZFiDhbWkt1BK9O0RO9DSG7jyBhfxRE
 
 
