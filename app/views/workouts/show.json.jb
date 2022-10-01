@@ -1,7 +1,7 @@
 {
   id: @workout.id,
   title: @workout.title,
-  owner: current_user == @workout.current_user
+  owner: @workout.user == current_user,
   routines: @workout.routines.map do |routine|
     {
       exercise_id: routine.exercise_id,
