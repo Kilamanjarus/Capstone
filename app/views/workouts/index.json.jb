@@ -5,6 +5,7 @@
     exercises: workout.exercises,
     routines: workout.routines.map do |routine|
       {
+        routine_id: routine.id,
         exercise_id: routine.exercise_id,
         exercise: routine.exercise,
         workout_id: routine.workout_id,

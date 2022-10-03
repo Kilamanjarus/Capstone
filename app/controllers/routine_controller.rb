@@ -33,6 +33,8 @@ class RoutineController < ApplicationController
     if routine.status == "added"
       routine.delete
       render json: { message: "Exercise has been removed..." }
+    elsif routine.status == "archived"
+      routine.delete
     else
       render json: { message: "Error, this exercise has been commited and is not able to be removed..." }
     end

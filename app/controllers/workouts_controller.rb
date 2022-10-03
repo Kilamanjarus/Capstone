@@ -24,4 +24,9 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find_by(id: params[:id])
     render template: "workouts/show"
   end
+
+  def destroy
+    @workout = Workout.find_by(id: params[:id])
+    @workout.delete
+  end
 end

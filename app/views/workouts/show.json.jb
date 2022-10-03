@@ -2,11 +2,13 @@
   id: @workout.id,
   title: @workout.title,
   owner: @workout.user == current_user,
+  user: @workout.user,
   routines: @workout.routines.map do |routine|
     {
+      routine_id: routine.id,
       exercise_id: routine.exercise_id,
-      exercise: routine.exercise,
       workout_id: routine.workout_id,
+      exercise: routine.exercise,
       added_weight: routine.added_weight,
       reps: routine.reps,
       sets: routine.sets,
