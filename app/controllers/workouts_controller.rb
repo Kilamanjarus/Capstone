@@ -13,9 +13,11 @@ class WorkoutsController < ApplicationController
 
     routine = Routine.where(status: "added")
     routine.each do |exercise|
-      exercise.status = "archived"
-      exercise.workout_id = workout.id
-      exercise.save!
+      if exercise.user_id == current_user.id
+        exercise.status = "archived"
+        exercise.workout_id = workout.id
+        exercise.save!
+      end
     end
     render json: workout.as_json
   end
