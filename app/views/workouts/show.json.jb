@@ -14,6 +14,7 @@
       sets: routine.sets,
     }
   end,
+  voted: UserVote.find_by(user_id: current_user.id, workout_id: @workout.id),
   created_at: @workout.created_at,
   updated_at: @workout.updated_at,
 }

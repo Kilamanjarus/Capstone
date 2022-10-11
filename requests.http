@@ -3,7 +3,7 @@ get http://localhost:3000/routines.json
 
 ### Routine Create
 post http://localhost:3000/routines
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjQ1NTg4NDJ9.fAp1Iv9qNrBgXZFiDhbWkt1BK9O0RO9DSG7jyBhfxRE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU1ODczNjl9.leMD4Kxut6-RST76j0lzC2FFXkgvDa0y52RweKs0vBY
 Content-Type: application/json
 
 {
@@ -55,7 +55,7 @@ patch http://localhost:3000/workouts/1.json
 
 ### Exercise Index
 get http://localhost:3000/exercises.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjQ1NTg4NDJ9.fAp1Iv9qNrBgXZFiDhbWkt1BK9O0RO9DSG7jyBhfxRE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU1ODczNjl9.leMD4Kxut6-RST76j0lzC2FFXkgvDa0y52RweKs0vBY
 
 ### Exercise Show
 get http://localhost:3000/exercises/1.json
@@ -87,7 +87,7 @@ Content-Type: application/json
 
 ### User_Equipment Create
 POST http://localhost:3000/userequipment
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjQ1NTg4NDJ9.fAp1Iv9qNrBgXZFiDhbWkt1BK9O0RO9DSG7jyBhfxRE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU1ODczNjl9.leMD4Kxut6-RST76j0lzC2FFXkgvDa0y52RweKs0vBY
 Content-Type: application/json
 
 {
@@ -96,10 +96,37 @@ Content-Type: application/json
 
 ### User_Equipment Delete
 DELETE http://localhost:3000/userequipment/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjQ1NTg4NDJ9.fAp1Iv9qNrBgXZFiDhbWkt1BK9O0RO9DSG7jyBhfxRE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU1ODczNjl9.leMD4Kxut6-RST76j0lzC2FFXkgvDa0y52RweKs0vBY
 
 
 
 ### Equipment Index
 get http://localhost:3000/equipment.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjQ1NTg4NDJ9.fAp1Iv9qNrBgXZFiDhbWkt1BK9O0RO9DSG7jyBhfxRE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU1ODczNjl9.leMD4Kxut6-RST76j0lzC2FFXkgvDa0y52RweKs0vBY
+
+
+### User Vote Index
+get http://localhost:3000/votes
+
+### User Vote Create
+post http://localhost:3000/votes
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU1ODczNjl9.leMD4Kxut6-RST76j0lzC2FFXkgvDa0y52RweKs0vBY
+Content-Type: application/json
+
+{
+  "workout_id": 4,
+  "vote": true
+}
+
+### User Vote Update
+patch http://localhost:3000/votes/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU1ODczNjl9.leMD4Kxut6-RST76j0lzC2FFXkgvDa0y52RweKs0vBY
+Content-Type: application/json
+
+{
+  "vote": false
+}
+
+
+### User Vote Delete
+delete http://localhost:3000/votes/1

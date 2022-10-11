@@ -23,4 +23,9 @@ Rails.application.routes.draw do
 
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
+
+  get "/votes" => "user_votes#index"
+  post "/votes" => "user_votes#create"
+  patch "/votes/:id" => "user_votes#update"
+  delete "/votes/:id" => "user_votes#destroy"
 end
