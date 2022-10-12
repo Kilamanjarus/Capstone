@@ -119,7 +119,7 @@ Content-Type: application/json
 }
 
 ### User Vote Update
-patch http://localhost:3000/votes/1
+patch http://localhost:3000/votes/15
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU1ODczNjl9.leMD4Kxut6-RST76j0lzC2FFXkgvDa0y52RweKs0vBY
 Content-Type: application/json
 
