@@ -108,6 +108,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU1ODczN
 ### User Vote Index
 get http://localhost:3000/votes
 
+### User Vote Show
+get http://localhost:3000/votes/4
+Content-Type: application/json
+
+{
+  "workout_id": 4
+}
+
 ### User Vote Create
 post http://localhost:3000/votes
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU1ODczNjl9.leMD4Kxut6-RST76j0lzC2FFXkgvDa0y52RweKs0vBY

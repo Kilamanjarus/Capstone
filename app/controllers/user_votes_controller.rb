@@ -4,6 +4,11 @@ class UserVotesController < ApplicationController
     render json: @user_votes.as_json
   end
 
+  def show
+    @user_votes = UserVote.where(workout_id: params[:id])
+    render json: @user_votes.as_json
+  end
+
   def create
     user_vote = UserVote.new
     user_vote.user_id = current_user.id
