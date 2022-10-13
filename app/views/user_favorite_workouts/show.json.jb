@@ -1,0 +1,5 @@
+{
+  id: @user_favorite_workout.id,
+  created_at: @user_favorite_workout.created_at,
+  updated_at: @user_favorite_workout.updated_at
+}

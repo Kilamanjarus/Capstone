@@ -29,4 +29,8 @@ Rails.application.routes.draw do
   post "/votes" => "user_votes#create"
   patch "/votes/:id" => "user_votes#update"
   delete "/votes/:id" => "user_votes#destroy"
+
+  get "/favorites" => "user_favorite_workouts#index"
+  post "/favorites" => "user_favorite_workouts#create"
+  delete "/favorites/:id" => "user_favorite_workouts#destroy"
 end

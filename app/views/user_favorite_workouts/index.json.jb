@@ -1,0 +1,7 @@
+@user_favorite_workouts.map do |user_favorite_workout|
+  {
+    id: user_favorite_workout.id,
+    user_id: user_favorite_workout.user_id,
+    workout_id: user_favorite_workout.workout_id,
+  }
+end
