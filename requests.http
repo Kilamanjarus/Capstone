@@ -1,9 +1,32 @@
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "first_name": "Test",
+  "last_name": "Tester",
+  "username": "Testing",
+  "age": 1,
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
 ### Routine Index
 get http://localhost:3000/routines.json
 
 ### Routine Create
 post http://localhost:3000/routines
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU3NjA5ODd9.4xt0M6YUeMai4wTS9i8dHBTLnQPi-PwIMpUxFVQZBRw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
 Content-Type: application/json
 
 {
@@ -34,6 +57,7 @@ delete http://localhost:3000/routines/12
 
 ### Workouts Index
 get http://localhost:3000/workouts.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
 
 ### Workouts Show
 get http://localhost:3000/workouts/1.json
@@ -55,39 +79,16 @@ patch http://localhost:3000/workouts/1.json
 
 ### Exercise Index
 get http://localhost:3000/exercises.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU3NjA5ODd9.4xt0M6YUeMai4wTS9i8dHBTLnQPi-PwIMpUxFVQZBRw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
 
 ### Exercise Show
 get http://localhost:3000/exercises/1.json
 
 
 
-### Users create (signup)
-POST http://localhost:3000/users.json
-Content-Type: application/json
-
-{
-  "first_name": "Test",
-  "last_name": "Tester",
-  "username": "Testing",
-  "age": 1,
-  "email": "test@test.com",
-  "password": "password",
-  "password_confirmation": "password"
-}
-
-### Sessions create (login)
-POST http://localhost:3000/sessions.json
-Content-Type: application/json
-
-{
-  "email": "test@test.com",
-  "password": "password"
-}
-
 ### User_Equipment Create
 POST http://localhost:3000/userequipment
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU3NjA5ODd9.4xt0M6YUeMai4wTS9i8dHBTLnQPi-PwIMpUxFVQZBRw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
 Content-Type: application/json
 
 {
@@ -96,13 +97,13 @@ Content-Type: application/json
 
 ### User_Equipment Delete
 DELETE http://localhost:3000/userequipment/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU3NjA5ODd9.4xt0M6YUeMai4wTS9i8dHBTLnQPi-PwIMpUxFVQZBRw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
 
 
 
 ### Equipment Index
 get http://localhost:3000/equipment.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU3NjA5ODd9.4xt0M6YUeMai4wTS9i8dHBTLnQPi-PwIMpUxFVQZBRw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
 
 
 ### User Vote Index
@@ -118,7 +119,7 @@ Content-Type: application/json
 
 ### User Vote Create
 post http://localhost:3000/votes
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU3NjA5ODd9.4xt0M6YUeMai4wTS9i8dHBTLnQPi-PwIMpUxFVQZBRw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
 Content-Type: application/json
 
 {
@@ -128,7 +129,7 @@ Content-Type: application/json
 
 ### User Vote Update
 patch http://localhost:3000/votes/15
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU3NjA5ODd9.4xt0M6YUeMai4wTS9i8dHBTLnQPi-PwIMpUxFVQZBRw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
 Content-Type: application/json
 
 {
@@ -143,11 +144,11 @@ delete http://localhost:3000/votes/1
 
 ### Workout Favorite Index
 get http://localhost:3000/favorites
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU3NjA5ODd9.4xt0M6YUeMai4wTS9i8dHBTLnQPi-PwIMpUxFVQZBRw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
 
 ### Workout Favorite Create
 post http://localhost:3000/favorites
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU3NjA5ODd9.4xt0M6YUeMai4wTS9i8dHBTLnQPi-PwIMpUxFVQZBRw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
 Content-Type: application/json
 
 {
@@ -156,4 +157,4 @@ Content-Type: application/json
 
 ### Workout Favorite Delete
 delete http://localhost:3000/favorites/4
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU3NjA5ODd9.4xt0M6YUeMai4wTS9i8dHBTLnQPi-PwIMpUxFVQZBRw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
