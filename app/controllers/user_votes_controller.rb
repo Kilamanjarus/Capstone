@@ -1,7 +1,7 @@
 class UserVotesController < ApplicationController
   def index
     @user_votes = UserVote.all
-    render json: @user_votes.as_json
+    render template: "user_votes/index"
   end
 
   def show

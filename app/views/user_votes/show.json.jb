@@ -1,0 +1,5 @@
+{
+  id: @user_vote.id,
+  created_at: @user_vote.created_at,
+  updated_at: @user_vote.updated_at
+}

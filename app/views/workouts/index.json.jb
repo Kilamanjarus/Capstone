@@ -15,5 +15,7 @@
         sets: routine.sets,
       }
     end,
+    UpVotes: workout.user_votes.where(vote: true),
+    DownVotes: workout.user_votes.where(vote: false),
   }
 end

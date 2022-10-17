@@ -1,0 +1,8 @@
+@user_votes.map do |user_vote|
+  {
+    id: user_vote.id,
+    user_id: user_vote.user_id,
+    workout_id: user_vote.workout_id,
+    vote: user_vote.vote,
+  }
+end

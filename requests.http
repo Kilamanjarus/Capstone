@@ -107,7 +107,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzO
 
 
 ### User Vote Index
-get http://localhost:3000/votes
+get http://localhost:3000/votes.json
 
 ### User Vote Show
 get http://localhost:3000/votes/4
