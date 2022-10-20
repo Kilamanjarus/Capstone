@@ -158,3 +158,21 @@ Content-Type: application/json
 ### Workout Favorite Delete
 delete http://localhost:3000/favorites/4
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
+
+
+
+### Workout User Comment Index
+get http://localhost:3000/comments
+
+### Workout User Comment Create
+post http://localhost:3000/comments
+Content-Type: application/json
+
+{
+  "user_id": 2,
+  "workout_id": 3,
+  "comment": "Too easy, try again nerd."
+}
+
+### Workout User Comment Destroy
+delete http://localhost:3000/comments/3

@@ -1,0 +1,2 @@
+class UserWorkoutCommentLikesController < ApplicationController
+end

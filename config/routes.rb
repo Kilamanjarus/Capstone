@@ -33,4 +33,8 @@ Rails.application.routes.draw do
   get "/favorites" => "user_favorite_workouts#index"
   post "/favorites" => "user_favorite_workouts#create"
   delete "/favorites/:id" => "user_favorite_workouts#destroy"
+
+  get "/comments" => "user_workout_comments#index"
+  post "/comments" => "user_workout_comments#create"
+  delete "/comments/:id" => "user_workout_comments#destroy"
 end
