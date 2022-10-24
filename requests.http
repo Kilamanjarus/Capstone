@@ -162,7 +162,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzO
 
 
 ### Workout User Comment Index
-get http://localhost:3000/comments
+get http://localhost:3000/comments.json 
 
 ### Workout User Comment Create
 post http://localhost:3000/comments

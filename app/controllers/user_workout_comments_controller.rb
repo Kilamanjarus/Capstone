@@ -1,7 +1,7 @@
 class UserWorkoutCommentsController < ApplicationController
   def index
-    @comments = UserWorkoutComment.all
-    render json: @comments.as_json
+    @user_workout_comments = UserWorkoutComment.all
+    render template: "user_workout_comments/index"
   end
 
   def create

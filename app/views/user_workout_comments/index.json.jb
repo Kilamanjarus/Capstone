@@ -1,0 +1,9 @@
+@user_workout_comments.map do |user_workout_comment|
+  {
+    id: user_workout_comment.id,
+    workout_id: user_workout_comment.workout_id,
+    user: user_workout_comment.user,
+    comment: user_workout_comment.comment,
+    owner: current_user == user_workout_comment.user,
+  }
+end
