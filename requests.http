@@ -176,3 +176,21 @@ Content-Type: application/json
 
 ### Workout User Comment Destroy
 delete http://localhost:3000/comments/3
+
+
+
+### Workout User Comment Likes Index
+get http://localhost:3000/commentlikes.json 
+
+### Workout User Comment Likes Create
+post http://localhost:3000/commentlikes.json
+Content-Type: application/json
+
+{
+  "user_id": 2,
+  "user_workout_comment_id": 1,
+  "status": "Liked"
+}
+
+### Workout User Comment Likes Destroy
+delete http://localhost:3000/commentlikes/1

@@ -37,4 +37,8 @@ Rails.application.routes.draw do
   get "/comments" => "user_workout_comments#index"
   post "/comments" => "user_workout_comments#create"
   delete "/comments/:id" => "user_workout_comments#destroy"
+
+  get "/commentlikes" => "user_workout_comment_likes#index"
+  post "/commentlikes" => "user_workout_comment_likes#create"
+  delete "/commentlikes/:id" => "user_workout_comment_likes#destroy"
 end
