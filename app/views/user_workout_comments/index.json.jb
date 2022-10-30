@@ -4,6 +4,7 @@
     workout_id: user_workout_comment.workout_id,
     user: user_workout_comment.user,
     comment: user_workout_comment.comment,
+    likes: user_workout_comment.user_workout_comment_likes,
     owner: current_user == user_workout_comment.user,
   }
 end
