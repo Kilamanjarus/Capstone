@@ -40,5 +40,6 @@ Rails.application.routes.draw do
 
   get "/commentlikes" => "user_workout_comment_likes#index"
   post "/commentlikes" => "user_workout_comment_likes#create"
+  patch "/commentlikes/:id" => "user_workout_comment_likes#update"
   delete "/commentlikes/:id" => "user_workout_comment_likes#destroy"
 end

@@ -192,5 +192,15 @@ Content-Type: application/json
   "status": "Liked"
 }
 
+### Workout User Comment Likes Update
+patch http://localhost:3000/commentlikes/1.json
+Content-Type: application/json
+
+{
+  "user_id": 2,
+  "user_workout_comment_id": 1,
+  "status": "Liked"
+}
+
 ### Workout User Comment Likes Destroy
 delete http://localhost:3000/commentlikes/1

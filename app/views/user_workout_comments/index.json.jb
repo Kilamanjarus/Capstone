@@ -5,7 +5,7 @@
     user: user_workout_comment.user,
     comment: user_workout_comment.comment,
     likes: user_workout_comment.user_workout_comment_likes,
-    user_liked: !user_workout_comment.user_workout_comment_likes.find_by(user_id: current_user.id).nil?,
+    user_liked: user_workout_comment.user_workout_comment_likes.find_by(user_id: current_user.id),
     owner: current_user == user_workout_comment.user,
   }
 end

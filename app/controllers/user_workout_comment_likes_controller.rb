@@ -18,4 +18,13 @@ class UserWorkoutCommentLikesController < ApplicationController
     user_comment_like.delete
     render json: { message: "Changed Liked" }
   end
+
+  def update
+    user_comment_like = UserWorkoutCommentLike.find_by(id: params[:id])
+    if current_user.id == user_comment_like.user_id
+      user_comment_like.status = params[:status]
+      user_comment_like.save
+    end
+    render json: user_comment_like.as_json
+  end
 end
