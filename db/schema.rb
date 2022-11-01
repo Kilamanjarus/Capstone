@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_31_203058) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_01_175243) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -32,11 +32,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_31_203058) do
 
   create_table "routine_sets", force: :cascade do |t|
     t.integer "routine_id"
-    t.integer "sets"
     t.string "reps"
     t.integer "added_weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "exercise_id"
   end
 
   create_table "routines", force: :cascade do |t|

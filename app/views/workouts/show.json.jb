@@ -9,9 +9,7 @@
       exercise_id: routine.exercise_id,
       workout_id: routine.workout_id,
       exercise: routine.exercise,
-      added_weight: routine.added_weight,
-      reps: routine.reps,
-      sets: routine.sets,
+      sets: routine.routine_sets,
     }
   end,
   vote: UserVote.find_by(user_id: current_user.id, workout_id: @workout.id),

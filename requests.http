@@ -54,7 +54,7 @@ Content-Type: application/json
 delete http://localhost:3000/routines/12
 
 
-### Routine Set Post
+### Routine Set Index
 get http://localhost:3000/routinesets
 
 ### Routine Set Post
@@ -68,6 +68,9 @@ Content-Type: application/json
 "reps": 10,
 "sets": 3
 }
+
+### Routine Set Delete
+delete http://localhost:3000/routinesets/1
 
 
 ### Workouts Index

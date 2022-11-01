@@ -9,5 +9,6 @@
     gifUrl: exercise.gifUrl,
     on_routine: exercise.routines.where(workout_id: nil, user_id: current_user.id).empty? == false,
     own_equipment: !current_user.equipments.find_by(id: Equipment.find_by(equipment_name: exercise.equipment).id).nil?,
+    routine_sets: exercise.routine_sets.where(user_id: current_user.id),
   }
 end

@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :workouts
   has_many :routines
+  has_many :routine_sets
   has_many :user_equipments
   has_many :equipments, through: :user_equipments
   has_many :user_votes
