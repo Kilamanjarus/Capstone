@@ -54,6 +54,21 @@ Content-Type: application/json
 delete http://localhost:3000/routines/12
 
 
+### Routine Set Post
+get http://localhost:3000/routinesets
+
+### Routine Set Post
+post http://localhost:3000/routinesets
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
+Content-Type: application/json
+
+{
+"routine_id": 2,
+"added_weight": 10,
+"reps": 10,
+"sets": 3
+}
+
 
 ### Workouts Index
 get http://localhost:3000/workouts.json

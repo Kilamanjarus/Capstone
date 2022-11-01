@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   patch "/routines/:id" => "routine#update"
   delete "/routines/:id" => "routine#destroy"
 
+  get "/routinesets" => "routine_sets#index"
+  post "/routinesets" => "routine_sets#create"
+
   get "/workouts" => "workouts#index"
   get "/workouts/:id" => "workouts#show"
   post "/workouts" => "workouts#create"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_25_145717) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_31_203058) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,12 +30,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_25_145717) do
     t.string "gifUrl"
   end
 
+  create_table "routine_sets", force: :cascade do |t|
+    t.integer "routine_id"
+    t.integer "sets"
+    t.string "reps"
+    t.integer "added_weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "routines", force: :cascade do |t|
     t.integer "exercise_id"
     t.integer "workout_id"
-    t.integer "added_weight"
-    t.integer "reps"
-    t.integer "sets"
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

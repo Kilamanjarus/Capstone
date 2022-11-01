@@ -10,9 +10,7 @@
         exercise_id: routine.exercise_id,
         exercise: routine.exercise,
         workout_id: routine.workout_id,
-        added_weight: routine.added_weight,
-        reps: routine.reps,
-        sets: routine.sets,
+        sets: routine.routine_sets,
       }
     end,
     owner: workout.user,
