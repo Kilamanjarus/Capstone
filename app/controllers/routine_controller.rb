@@ -9,9 +9,6 @@ class RoutineController < ApplicationController
     @routine = Routine.new(
       exercise_id: params[:exercise_id],
       workout_id: params[:workout_id],
-      added_weight: params[:added_weight],
-      reps: params[:reps],
-      sets: params[:sets],
       user_id: current_user.id,
       status: "added",
     )
