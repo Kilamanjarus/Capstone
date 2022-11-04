@@ -20,4 +20,12 @@ class RoutineSetsController < ApplicationController
     routine_set.destroy
     render json: { message: "Set removed" }
   end
+
+  def update
+    routine_set = RoutineSet.find_by(id: params[:id])
+    routine_set.reps = params[:reps] || reoutine_set.reps
+    routine_set.added_weight = params[:added_weight] || reoutine_set.added_weight
+    routine_set.save
+    render json: routine_set.as_json
+  end
 end

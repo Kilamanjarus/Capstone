@@ -69,6 +69,18 @@ Content-Type: application/json
 "sets": 3
 }
 
+### Routine Set Update
+patch http://localhost:3000/routinesets
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjU4NDMzODR9.JbHGeMOhCmAsPkMfe97YENNtPHMX5a8SlqrnEuFDDB0
+Content-Type: application/json
+
+{
+"routine_id": 2,
+"added_weight": 10,
+"reps": 10,
+"sets": 3
+}
+
 ### Routine Set Delete
 delete http://localhost:3000/routinesets/1
 
